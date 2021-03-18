@@ -34,7 +34,7 @@ z - learned temporal latents matrix (K x T)
 theta - learned loadings/features matrix (O x K)
 KL - KL-divergence between the model and the data.
 %}
-function [z,theta,KL]  = TMI(X,K,learn_z, learn_the,max_steps)
+function [z,theta,KL]  = TMI(X,K,learn_z, learn_the,max_steps,min_fitting,min_gradients)
     X = normalize(X,'norm',1);
     [O,T] = size(X);
     % Initialize the inference with random matrices z and theta
