@@ -3,7 +3,7 @@
 % Author 1: Mayar Shahin
 % Author 2: Brian Ji
 % Author 3: Purushottam Dixit
-% Date: 03/15/2020
+% Date: 11/10/2020
 
 % Description: Rotating takes in latennts z and loadings theta
 % matrices learned from fitting the data on a Gibbs-Boltzmann distribution 
@@ -12,17 +12,17 @@
 %% Inputs: 
 %{
 z - learned temporal latents matrix (K x T)
-theta - learned loadings/features matrix (O x K)
+theta - learned loadings/features matrix (N*O x K)
 days - array of days on which the samples were taken (not necessarily
 consecutive)
-X - OTU table of the data (O x T)
+X - OTU table of the data (N*O x T)
 max_steps - maximum number of inference steps (set to 1000000)
 %}
 
 %% Outputs
 %{ 
 Y - The resulting independent, orthogonal Ecological Normal Modes (ECN) (K x T)
-Phi - The rotated loadings (O x K)
+Phi - The rotated loadings (N*O x K)
 %}
 
 

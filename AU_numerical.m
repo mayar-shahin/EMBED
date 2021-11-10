@@ -2,7 +2,7 @@
 % Author 1: Mayar Shahin
 % Author 2: Brian Ji
 % Author 3: Purushottam Dixit
-% Date: 03/15/2020
+% Date: 11/10/2021
 
 
 %% Inputs: 
@@ -34,9 +34,9 @@ tstOld = 0;
 while eOld > 0.00001
     %
     %perturbing A and u
-    ANew = AOld + 0.001*randn(K,K).*(rand(K,K)>0.95); 
+    ANew = AOld + 0.005*randn(K,K).*(rand(K,K)>0.95); 
     ANew = 0.5*(ANew + ANew'); %imposing symmetric A
-    uNew = uOld + 0.001*randn(K,1).*(rand(K,1)>0.95);
+    uNew = uOld + 0.005*randn(K,1).*(rand(K,1)>0.95);
     eNew = 0;
     for t=2:length(days) % calculating missing days
         Z0 = Z(t-1,:)';Zt = Z0;
