@@ -8,7 +8,8 @@ EMBED reorients th elatents z into Ecological Normal Modes (ECNs) (y) that repre
 
 ## System Requirements
 
-The code is written in Matlab Release R2019b. A python version will soon be provided. 
+The code is written in Matlab Release R2019b. No special hardware required.
+A python version will soon be provided. 
 
 ## Demo
 
@@ -24,7 +25,7 @@ The code is written in Matlab Release R2019b. A python version will soon be prov
 	- it repeats the process to check for uniqueness of inference for two different runs. A plot of the Y values for Run1 vs Run2 is shown.
 	- It plots the inferred ECNs Y 
  
-* The typical run time is on a 16gb ram computer is ~ 10 minutes.
+* The typical run time is on a 16gb ram computer is less than 10 minutes.
 
 ##  Instructions to run on your own Data
 
