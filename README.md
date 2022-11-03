@@ -9,7 +9,18 @@ EMBED reorients th elatents z into Ecological Normal Modes (ECNs) (y) that repre
 ## System Requirements
 
 The code is written in Matlab Release R2019b. No special hardware required.
-A python version will soon be provided. 
+Note: For recreating figure 1, we run CTF on python using the provided package by Martio et al. Gemelli [2]. Some scripts in the package are edited to output extra information already calculated by the functions. 
+To use that, you can move the folder '\python_directory\gemelli_env' into your environments directory and activate it.
+
+## Contents 
+* '\python_directory\Data' contains all data used to produce plots in the paper including GLV simulations results as matlab data file '.mat'
+to import into python use the scipy.io.loadmat(<filename>)
+* '\python_directory\Results' contains methods results (Lasso, EMBED and CTF for K=3,4,5) for different data sets. These are the inferred results used to produce 
+plots in Figure 2.
+to import into python use the scipy.io.loadmat(<filename>)
+* '\python_directory\Scripts' has all python files we used to run EMBED, Lasso and CTF for Figure 2.
+* 
+
 
 ## Demo
 
@@ -19,6 +30,8 @@ A python version will soon be provided.
  	- 'diet_data' = The OTU table of size (74 OTUs*5 subjects) x 31 days. 
  	- 'days' = days on which the data is present (not consecutive)
  	- 'N' = number of subjects  
+	
+	
 
 * The file titled 'run_demo.m' does the following:
 	- loads the data set, runs the TMI to infer Z's and θ's and rotates them into independent ECNs Y and loadings Phi.
@@ -51,4 +64,6 @@ A python version will soon be provided.
 ### References:
 [1] Dixit, P. D. Thermodynamic inference of data manifolds. Phys. Rev. Res. 2, 023201 (2020).
 
-[2] Carmody, R. N. et al. Diet Dominates Host Genotype in Shaping the Murine Gut Microbiota. Cell Host Microbe 17, 72–84 (2015).
+[2] Martino, C. et al. Context-aware dimensionality reduction deconvolutes gut microbial community dynamics. Nat Biotechnol 39, 165–168 (2021).
+
+[3] Carmody, R. N. et al. Diet Dominates Host Genotype in Shaping the Murine Gut Microbiota. Cell Host Microbe 17, 72–84 (2015).
