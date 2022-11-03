@@ -2,7 +2,7 @@
 
 ## Overview
 
-EMBED is a method that produces low dimensional representations of multi-subject longitudinal microbiome data.
+[EMBED](https://www.biorxiv.org/content/10.1101/2021.03.18.436036v3) is a method that produces low dimensional representations of multi-subject longitudinal microbiome data.
 EMBED learns time-specific latents (z) that are shared by all OTUs and subjects, and OTU-and subject-specific loadings (θ) that are shared across all time points. 
 EMBED reorients th elatents z into Ecological Normal Modes (ECNs) (y) that represent the indpendent directions of fluctuations in the data. The learned ECNs are the temporal bases for the dynamics.
 
